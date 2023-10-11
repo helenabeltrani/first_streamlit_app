@@ -50,8 +50,8 @@ if streamlit.button('Get Fruit Load List'):
     my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
     # my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
     my_data_rows = get_fruit_load_list()
-# streamlit.text("Hello from Snowflake:")
-streamlit.dataframe(my_data_rows)
+    # streamlit.text("Hello from Snowflake:")
+    streamlit.dataframe(my_data_rows)
 
 
 #don't run anything past here while we troubleshoot
